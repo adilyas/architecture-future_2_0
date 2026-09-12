@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="C4 Container To-Be" id="future20-c4-container-tobe">
-    <mxGraphModel dx="4108" dy="2384" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4100" pageHeight="2000" math="0" shadow="0">
+    <mxGraphModel dx="1134" dy="782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4100" pageHeight="2000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8,11 +8,11 @@
           <mxGeometry height="30" width="1200" x="40" y="10" as="geometry" />
         </mxCell>
         <mxCell id="legend" parent="1" style="text;html=1;strokeColor=#B09000;fillColor=#FFF2CC;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;spacing=8;fontSize=11;" value="&lt;b&gt;Как целевая архитектура поддерживает бизнес-сценарии&lt;/b&gt;&lt;br&gt;&lt;b&gt;1.&lt;/b&gt;&amp;nbsp;быстрая подготовка отчётности: отчёты строятся по готовым витринам доменов в Lakehouse через Dremio&lt;br&gt;&lt;b&gt;2.&lt;/b&gt;&amp;nbsp;независимое развитие финтеха и ИИ: у каждого своя облачная среда, своя БД и своя логика, в DWH ничего не добавляем, а в Lakehouse своя зона&lt;br&gt;&lt;b&gt;3.&lt;/b&gt;&amp;nbsp;масштабирование на новые бизнесы: для нового направления создается своя среда и делается продукт данных по общему контракту платформы&lt;br&gt;&lt;b&gt;4.&lt;/b&gt;&amp;nbsp;уровень доступа и требования регулятора: медкарты и исследования не выходят из домена клиник, доступ к витрине организован через SSO и роли&lt;br&gt;&lt;b&gt;5.&lt;/b&gt;&amp;nbsp;отказоустойчивость: Object Storage мультизонный, настроены снапшоты Iceberg, а также бэкапы и реплика DWH" vertex="1">
-          <mxGeometry height="170" width="760" x="3240" y="40" as="geometry" />
+          <mxGeometry height="170" width="760" x="4040" y="40" as="geometry" />
         </mxCell>
-        <object placeholders="1" c4Name="Интеграционный слой" c4Type="SystemScopeBoundary" c4Application="легаси, Retain" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: right&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: right&quot;&gt;[%c4Application%]&lt;/div&gt;" id="b-esb">
+        <object placeholders="1" c4Name="Интеграционный слой" c4Type="SystemScopeBoundary" c4Application="Старая ESB и новый API шлюз" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: right&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: right&quot;&gt;[%c4Application%]&lt;/div&gt;" id="b-esb">
           <mxCell parent="1" style="rounded=1;fontSize=11;whiteSpace=wrap;html=1;dashed=1;arcSize=20;fillColor=none;strokeColor=#666666;fontColor=#333333;labelBackgroundColor=none;align=right;verticalAlign=bottom;labelBorderColor=none;spacingTop=0;spacing=10;dashPattern=8 4;metaEdit=1;rotatable=0;perimeter=rectanglePerimeter;noLabel=0;labelPadding=0;allowArrows=0;connectable=0;expand=0;recursiveResize=0;editable=1;pointerEvents=0;absoluteArcSize=1;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
-            <mxGeometry height="220" width="2760" x="440" y="60" as="geometry" />
+            <mxGeometry height="220" width="2860" x="340" y="60" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Клиники" c4Type="SystemScopeBoundary" c4Application="домен, своя облачная среда" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;&lt;div style=&quot;text-align: left&quot;&gt;%c4Name%&lt;/div&gt;&lt;/b&gt;&lt;/font&gt;&lt;div style=&quot;text-align: left&quot;&gt;[%c4Application%]&lt;/div&gt;" id="b-clinics">
@@ -55,9 +55,9 @@
             <mxGeometry height="180" width="200" x="100" y="70" as="geometry" />
           </mxCell>
         </object>
-        <object placeholders="1" c4Name="ESB" c4Type="Container" c4Technology="Apache Camel" c4Description="Существующие интеграции через шину не трогаем, но новые не заводим" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="c-esb">
+        <object placeholders="1" c4Name="ESB" c4Type="Container" c4Technology="Apache Camel, 2 экземпляра" c4Description="Существующие интеграции через шину не трогаем, но новые не заводим" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="c-esb">
           <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#8C8496;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
-            <mxGeometry height="120" width="2680" x="480" y="100" as="geometry" />
+            <mxGeometry height="120" width="2080" x="600" y="100" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Name="Клиентский интерфейс оператора" c4Type="Container" c4Technology="PowerBuilder, легаси (Rehost)" c4Description="Рабочее место оператора клиники. Оставляем как есть" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="c-ui">
@@ -299,22 +299,22 @@
           </mxCell>
         </object>
         <object placeholders="1" c4Type="Relationship" c4Technology="Camel routes" c4Description="Медданные, управление клиниками" label="&lt;div style=&quot;text-align: left&quot;&gt;&lt;div style=&quot;text-align: center&quot;&gt;&lt;b&gt;%c4Description%&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center&quot;&gt;[%c4Technology%]&lt;/div&gt;&lt;/div&gt;" id="e15">
-          <mxCell edge="1" parent="1" source="c-esb" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;elbow=vertical;metaEdit=1;endSize=14;startSize=14;jumpStyle=arc;jumpSize=16;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.0597;exitY=1;entryX=0.5;entryY=0;startArrow=blockThin;startFill=1;" target="c-dwh">
+          <mxCell edge="1" parent="1" source="c-esb" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;elbow=vertical;metaEdit=1;endSize=14;startSize=14;jumpStyle=arc;jumpSize=16;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.0192;exitY=1;entryX=0.5;entryY=0;startArrow=blockThin;startFill=1;" target="c-dwh">
             <mxGeometry relative="1" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Type="Relationship" c4Technology="Camel routes" c4Description="Финансовые данные" label="&lt;div style=&quot;text-align: left&quot;&gt;&lt;div style=&quot;text-align: center&quot;&gt;&lt;b&gt;%c4Description%&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center&quot;&gt;[%c4Technology%]&lt;/div&gt;&lt;/div&gt;" id="e17">
-          <mxCell edge="1" parent="1" source="c-esb" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;elbow=vertical;metaEdit=1;endSize=14;startSize=14;jumpStyle=arc;jumpSize=16;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.194;exitY=1;entryX=0.5;entryY=0;startArrow=blockThin;startFill=1;" target="c-fin-svc">
+          <mxCell edge="1" parent="1" source="c-esb" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;elbow=vertical;metaEdit=1;endSize=14;startSize=14;jumpStyle=arc;jumpSize=16;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.1923;exitY=1;entryX=0.5;entryY=0;startArrow=blockThin;startFill=1;" target="c-fin-svc">
             <mxGeometry relative="1" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Type="Relationship" c4Technology="Camel routes" c4Description="Медданные на диагностику, результаты обратно" label="&lt;div style=&quot;text-align: left&quot;&gt;&lt;div style=&quot;text-align: center&quot;&gt;&lt;b&gt;%c4Description%&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center&quot;&gt;[%c4Technology%]&lt;/div&gt;&lt;/div&gt;" id="e16">
-          <mxCell edge="1" parent="1" source="c-esb" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;elbow=vertical;metaEdit=1;endSize=14;startSize=14;jumpStyle=arc;jumpSize=16;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.4925;exitY=1;entryX=0.5;entryY=0;startArrow=blockThin;startFill=1;" target="c-ai-svc">
+          <mxCell edge="1" parent="1" source="c-esb" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;elbow=vertical;metaEdit=1;endSize=14;startSize=14;jumpStyle=arc;jumpSize=16;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5769;exitY=1;entryX=0.5;entryY=0;startArrow=blockThin;startFill=1;" target="c-ai-svc">
             <mxGeometry relative="1" as="geometry" />
           </mxCell>
         </object>
         <object placeholders="1" c4Type="Relationship" c4Technology="Camel routes" c4Description="Внутренние финданные, управление клиниками" label="&lt;div style=&quot;text-align: left&quot;&gt;&lt;div style=&quot;text-align: center&quot;&gt;&lt;b&gt;%c4Description%&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center&quot;&gt;[%c4Technology%]&lt;/div&gt;&lt;/div&gt;" id="e18">
-          <mxCell edge="1" parent="1" source="c-esb" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;elbow=vertical;metaEdit=1;endSize=14;startSize=14;jumpStyle=arc;jumpSize=16;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.791;exitY=1;entryX=0.5;entryY=0;" target="c-hq-svc">
+          <mxCell edge="1" parent="1" source="c-esb" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;elbow=vertical;metaEdit=1;endSize=14;startSize=14;jumpStyle=arc;jumpSize=16;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.9615;exitY=1;entryX=0.5;entryY=0;" target="c-hq-svc">
             <mxGeometry relative="1" as="geometry" />
           </mxCell>
         </object>
@@ -369,6 +369,50 @@
               <Array as="points">
                 <mxPoint x="2700" y="1770" />
                 <mxPoint x="2700" y="1240" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="Балансировщик" c4Type="Container" c4Technology="L7" c4Description="Распределяет вызовы между двумя экземплярами ESB и при отказе одного переключает на второй" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="c-lb">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="170" x="370" y="100" as="geometry" />
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Name="API-шлюз" c4Type="Container" c4Technology="Yandex API Gateway" c4Description="Вход для новых синхронных интеграций: вызовы к API доменов идут по контрактам, шлюз проверяет схему и ограничивает нагрузку" label="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;%c4Name%&lt;/b&gt;&lt;/font&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font color=&quot;#E6E6E6&quot;&gt;%c4Description%&lt;/font&gt;&lt;/div&gt;" id="c-gw">
+          <mxCell parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;labelBackgroundColor=none;fillColor=#23A2D9;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;resizable=0;points=[[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0.25,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0],[0,0.25,0]];" vertex="1">
+            <mxGeometry height="120" width="240" x="2820" y="100" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="c-lb-m5" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFD966;strokeColor=#B09000;fontStyle=1;fontSize=12;fontColor=#000000;" value="5" vertex="1">
+          <mxGeometry height="26" width="26" x="506" y="87" as="geometry" />
+        </mxCell>
+        <mxCell id="c-gw-m3" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFD966;strokeColor=#B09000;fontStyle=1;fontSize=12;fontColor=#000000;" value="3" vertex="1">
+          <mxGeometry height="26" width="26" x="3026" y="87" as="geometry" />
+        </mxCell>
+        <mxCell id="esb-card" parent="1" style="text;html=1;strokeColor=#B09000;fillColor=#FFF2CC;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;spacing=8;fontSize=11;" value="&lt;b&gt;Как распределяется функционал ESB для новых интеграций:&lt;/b&gt;&lt;br&gt;&lt;b&gt;- ФЛК&lt;/b&gt; выполняет домен-источник, шлюз проверяет схему запросов, а витрины перед публикацией проверяют DAG&#39;и Airflow.&lt;br&gt;&lt;b&gt;- Пакетные трансформации&lt;/b&gt; переезжают в DAG&#39;и продуктов данных внутри Lakehouse&lt;br&gt;&lt;b&gt;- Потоковые трансформации&lt;/b&gt;&amp;nbsp;будут в CDC на Debezium, большая часть трансформаций делаются пакетно&lt;br&gt;&lt;b&gt;- Интеграционная логика:&lt;/b&gt;&amp;nbsp;новые синхронные связи между доменами идут через API шлюз, а асинхронные через Kafka&lt;br&gt;&lt;b&gt;- Бизнес-логика&lt;/b&gt; из маршрутов уходит в сервисы доменов&lt;br&gt;&lt;b&gt;- Надёжность&lt;/b&gt; обеспечивают два экземпляра шины за балансировщиком с алертом на рост необработанных сообщений, таймауты и повторы в клиентах доменов и безопасный перезапуск загрузок в Iceberg. Kafka развернут в нескольких зонах доступности&lt;br&gt;&lt;b&gt;- Судьба шины:&lt;/b&gt; в этом году она замораживается для новых интеграций. В перспектике она будет распиливаться и переноситься на новые рельсы, но это все после первого года трансформации.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Взаимодействия между существующими доменами в первый год остаются на ESB.&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="260" width="760" x="3240" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="e29" edge="1" parent="1" source="c-lb" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;elbow=vertical;metaEdit=1;endSize=14;startSize=14;jumpStyle=arc;jumpSize=16;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="c-esb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <object placeholders="1" c4Type="Relationship" c4Technology="REST" c4Description="Вызывает API доменов по контракту" label="&lt;div style=&quot;text-align: left&quot;&gt;&lt;div style=&quot;text-align: center&quot;&gt;&lt;b&gt;%c4Description%&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center&quot;&gt;[%c4Technology%]&lt;/div&gt;&lt;/div&gt;" id="e30">
+          <mxCell edge="1" parent="1" source="c-new-svc" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;elbow=vertical;metaEdit=1;endSize=14;startSize=14;jumpStyle=arc;jumpSize=16;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="c-gw">
+            <mxGeometry relative="1" x="-0.0476" as="geometry">
+              <mxPoint as="offset" />
+              <Array as="points">
+                <mxPoint x="3400" y="320" />
+                <mxPoint x="2940" y="320" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object placeholders="1" c4Type="Relationship" c4Technology="REST" c4Description="Проксирует вызовы к API финтеха" label="&lt;div style=&quot;text-align: left&quot;&gt;&lt;div style=&quot;text-align: center&quot;&gt;&lt;b&gt;%c4Description%&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center&quot;&gt;[%c4Technology%]&lt;/div&gt;&lt;/div&gt;" id="e31">
+          <mxCell edge="1" parent="1" source="c-gw" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;elbow=vertical;metaEdit=1;endSize=14;startSize=14;jumpStyle=arc;jumpSize=16;rounded=0;edgeStyle=orthogonalEdgeStyle;exitX=0.25;exitY=1;entryX=1;entryY=0.25;" target="c-fin-svc">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2880" y="255" />
+                <mxPoint x="1200" y="255" />
+                <mxPoint x="1200" y="425" />
               </Array>
             </mxGeometry>
           </mxCell>
